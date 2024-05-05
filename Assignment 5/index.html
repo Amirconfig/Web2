@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Hosein Khanmohammadi</title>
+
+<!--
+Author:       Amir Hosein Khanmohammadi
+Student ID:   991646689
+Program:      index.html
+Date:         March 20, 2023
+Updated:      March 24, 2023 
+Version:      1.0
+Description:  
+-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style='position:static;'></div>  
+<div class='grid-container'>
+  <div class='box header'>
+    <h1>"Assignment #2"  /  Amir Hosein Khanmohammadi</h1>
+    <h1>Painting Estimate Form</h1>
+  </div>
+
+  <div class='box question-container'>
+    <form action="process_estimate.php" method="post">
+      <label for="customer_name">Customer Name:</label>
+      <input class="input" type="text" id="customer_name" name="customer_name" pattern="[a-zA-Z\s]+" required title="Please enter a valid name with letters only"><br>
+
+      <label for="customer_email">Customer Email Address:</label>
+      <input class="input" type="email" id="customer_email" name="customer_email" required pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"><br>
+
+      <label for="room">Select a Room:</label>
+      <select class="input" id="room" name="room" required>
+        <option value="Bedroom">Bedroom</option>
+        <option value="Family Room">Family Room</option>
+        <option value="Living Room">Living Room</option>
+      </select><br>
+
+      <label for="side_one">Side One (sq ft):</label>
+      <input class="input" type="number" id="side_one" name="side_one" min="1" step="0.01" required><br>
+
+      <label for="side_two">Side Two (sq ft):</label>
+      <input class="input" type="number" id="side_two" name="side_two" min="1" step="0.01" required><br>
+
+      <label for="side_three">Side Three (sq ft):</label>
+      <input class="input" type="number" id="side_three" name="side_three" min="1" step="0.01" required><br>
+
+      <label for="color">Pick a Colour:</label>
+      <input class="input" type="color" id="color" name="color" required><br>
+
+      <label for="paint_type">Select Paint Type:</label>
+      <select class="input" id="paint_type" name="paint_type" required>
+        <option value="34.99">Standard Paint ($34.99 per can)</option>
+        <option value="45">Premium Paint ($45 per can)</option>
+      </select><br>
+
+      <input class="submit-btn" type="submit" value="Submit">
+    </form>
+  </div>
+
+      <footer class='box footer'>
+        <p class="footer-content">Copyright © 2023 Amir H Khanmohammadi<br>
+        Email: <a href="mailto:khanmoam@sheridancollege.ca">khanmoam@sheridancollege.ca</a></p>
+      </footer>
+
+</div>
+</body>
+</html>

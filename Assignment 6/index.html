@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>One Spin Slot Machine</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <?php require('game.php'); ?>
+
+    <img src="images/Logo.png" alt="Logo" id="logo">
+    <img src="images/fox.png" alt="logo fox" id="logo1">
+
+    <video autoplay muted loop>
+        <source src="images/Media1.mp4" type="video/mp4">
+    </video>
+
+    <div class='grid-container'>
+        <div class='box header'>
+          <h1>"Assignment #6"  /  Amir Hosein Khanmohammadi</h1>
+          <h1>One Spin Slot Machine</h1>
+        </div>
+      
+        <div class='box question-container'>
+    
+            <div id="credits">Credits: 100</div>
+            <div id="bet">
+              <label for="bet-input">Bet:</label>
+              <input type="number" id="bet-input" min="1" max="10" value="1">
+              <button id="spin-button">SPIN</button>
+            </div>
+            <div id="result"></div>
+            <div id="payout">Payout: 0</div>
+            <button id="reset-button">RESET</button>
+            
+        </div>
+      
+            <footer class='box footer'>
+              <p class="footer-content">Copyright © 2023 Amir H Khanmohammadi<br>
+              Email: <a href="mailto:khanmoam@sheridancollege.ca">khanmoam@sheridancollege.ca</a></p>
+            </footer>
+      
+      </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

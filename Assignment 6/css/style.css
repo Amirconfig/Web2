@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background-size: 100px auto;
+    background-position: center;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+  }
+
+  #logo {
+    position: absolute;
+    top: 10;
+    left: 10;
+    width: 250px; 
+    height: 150px;
+    z-index: 1; 
+  }
+
+  #logo1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+
+  
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .grid-container { display: grid; 
+    grid-template-columns: 1fr  1fr  1fr 1fr; 
+    grid-gap: 20px; width: 100%; 
+    padding: 0.5em;  background-color: rgba(0, 0, 0, 0); margin-top: 30px; }
+  .box { background-color: rgba(5, 11, 53, 0.26); color: rgb(245, 240, 240); 
+    text-align: center; padding: 2%;  border-radius: 20px; margin-right: 30px;}  
+  .header { grid-area: 1 / 2 / 2 / 5; }  
+  .question-container { grid-area: 2 / 2 / 3 / 5; }
+  .footer { grid-area: 4 / 2 / 5 / 5; }
+  td { text-align: justify; width: 6em; }
+
+
+  h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Didact Gothic';
+    padding-left: 30px;
+    padding-right: 30px;  
+  }
+  
+  footer a {
+    color: rgb(255, 255, 255);
+    font-family: 'Didact Gothic';
+    text-decoration: none;
+    font-size: 15px;
+   } 
+  .footer-content{
+    font-size: 15px;
+   }
+  
+  #credits, #bet, #payout {
+    font-size: 24px;
+    margin: 20px 0;
+    font-family: 'Didact Gothic';
+  }
+  
+  #bet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #bet-input {
+    border: 2px solid #1cb5d8d9;
+    background: #08a4b88f;
+    color: #fff;
+    transition: all .3s;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    margin: 0 10px;
+  }
+  #bet-input:focus {
+    border: 2px solid #74ffec;
+}
+  
+  #spin-button {
+    background-color: #0b650e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  #spin-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #result {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  #reset-button {
+    background-color: #85140c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  #reset-button:hover {
+    background-color: #d32f2f;
+  }
+  

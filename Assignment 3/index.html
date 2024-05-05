@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Hosein Khanmohammadi</title>
+
+<!--
+Author:       Amir Hosein Khanmohammadi
+Student ID:   991646689
+Program:      index.html
+Date:         February 04, 2023
+Updated:      February 05, 2023
+Version:      1.0
+Description:  This code creates a paint program in HTML & JavaScript that allows users to dynamically 
+              create a table with specified number of rows and columns, color the cells with selected
+              colors from a list of colors,and clear all cells.
+-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header class='header'>
+        <h1>"Assignment #3"  /  Amir Hosein Khanmohammadi</h1>
+        <h1>paint</h1><br><br>
+    </header>
+    <section>
+    <table id="table"></table>
+    <div class="buttons">
+      <button style="background-color: white;;"></button>
+      <button style="background-color: black;"></button>
+      <button style="background-color: red;"></button>
+      <button style="background-color: orange;"></button>
+      <button style="background-color: yellow;"></button>
+      <button style="background-color: chartreuse;"></button>
+      <button style="background-color: green;"></button>
+      <button style="background-color: rgb(0, 122, 61);"></button>
+      <button style="background-color: cyan;"></button>
+      <button style="background-color: rgb(16, 61, 239);"></button>
+      <button style="background-color: blue;"></button>
+      <button style="background-color: violet;"></button>
+      <button style="background-color: magenta;"></button>
+      <button style="background-color: rgb(255, 0, 170);"></button>
+    </div>
+    <button id="clear">Clear</button>
+    <div>
+      <label for="rows">Rows: </label>
+      <input type="number" id="rows" value="10" min="0">
+      <label for="columns">Columns: </label>
+      <input type="number" id="columns" min="0">
+      <button id="update">Update</button>
+    </div>
+
+    <script src="js/MyJavaScript.js"></script>
+    </section><br>
+
+    <footer>
+        <p class="footer-content">Copyright © 2023 Amir H Khanmohammadi<br>
+        Email: <a href="mailto:khanmoam@sheridancollege.ca">khanmoam@sheridancollege.ca</a></p>
+    </footer>
+
+  </body>
+</html>

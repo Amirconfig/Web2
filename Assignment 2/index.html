@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Hosein Khanmohammadi</title>
+
+<!--
+Author:       Amir Hosein Khanmohammadi
+Student ID:   991646689
+Program:      index.html
+Date:         January 28, 2023
+Updated:      February 02, 2022 
+Version:      1.0
+Description:  An application for Math Practice (5 simple math questions with 
+              3 answers for each question).
+-->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div style='position:static;'></div>
+    <div class='grid-container'>
+        <div class='box header'>
+            <h1>"Assignment #2"  /  Amir Hosein Khanmohammadi</h1>
+            <h1>Math Practice application</h1>
+        </div>
+
+        <div class='box question-container'>
+
+        <h2>Question</h2>
+            <button class="start-btn">Start Practice</button>
+            <div class="note">
+            <p style="font-weight: bold;">"NOTE"</p>
+            <p>     This Math exercise contains of 5 questions, and You have to answer them within 2 minutes.</p>
+            </div>
+            <div class="question" style="display:none;"></div>
+            <div class="answers">
+                <div class="answer" id="answer1" style="display:none;"></div>
+                <div class="answer" id="answer2" style="display:none;"></div>
+                <div class="answer" id="answer3" style="display:none;"></div>
+            </div>
+            <p class="textBox" style="display:none;">"Good job on your practice"</p>
+            <div class="score" style="display:none;"></div>
+            <br>
+            <button class="restart-btn" style="display:none;">Restart</button>
+            <div class="timer" style="display:none;"></div>
+        
+
+        <script src="js/math-practice.js"></script>
+    
+        </div>
+
+        <div class='box Description'>
+            <h4>Description About My Code</h4><br>
+            <p><strong>JavaScript</strong> is a high-level, scripting programming language that is widely used to make dynamic, 
+                interactive web pages. In my code, I have a JavaScript file named "math-practice.js" that is 
+                included in the HTML file using the script tag. The script file contains the logic that will 
+                control the behavior of the web page, such as handling user input, displaying questions, and 
+                keeping track of the score. The JavaScript code interacts with the HTML elements on the page 
+                by accessing and modifying their properties and values.</p><br>
+
+            <p><strong>HTML</strong>, or Hypertext Markup Language, is a markup language used for creating and structuring web pages. 
+                Your code uses HTML to define the structure and content of the web page, including the header, 
+                footer, and various other elements such as buttons, headings, and text. HTML elements are defined 
+                using tags and are nested within each other to create the structure of the page. For example, I have 
+                a div tag with the class <em>"grid-container"</em> that acts as a container for all other elements on the page. 
+                The CSS file is used to control the visual appearance of the HTML elements.</p><br>
+
+            <p>My JavaScript code implements a simple math practice. The code defines variables for different elements 
+                in the HTML page such as <strong>the start button, questions, answers, score, and timer</strong> display. The code then 
+                defines an array of questions and answers. The startPractice() function is called when the start button 
+                is clicked and sets the display properties of various elements and starts a timer. The answers are 
+                checked by the <em>checkAnswer()</em> function, and the score is updated based on the correct answers. The practice 
+                restarts when the restart button is clicked.</p><br>
+
+            <p>My HTML code for a webpage that displays a math practice application. The webpage consists of <strong>four main 
+                sections, the header, question container, description, and footer</strong>. The header section displays the 
+                title of the application, the author's name, and the purpose of the application.
+                The question container section contains a button "Start Practice," which when clicked starts the math 
+                practice. There are five questions that are displayed one at a time, and the user has two minutes to 
+                answer them all. The section also displays the score, a restart button, and a timer.
+                The code uses a CSS file named <em>"style.css"</em> and a JavaScript file named <em>" math-practice.js "</em> to style 
+                the page and provide interactivity.</p>
+
+        </div>
+
+        <footer class='box footer'>
+            <p class="footer-content">Copyright © 2023 Amir H Khanmohammadi<br>
+            Email: <a href="mailto:khanmoam@sheridancollege.ca">khanmoam@sheridancollege.ca</a></p>
+        </footer>
+    </div>
+</body>
+</html>

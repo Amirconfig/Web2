@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Amir Hosein Khanmohammadi</title>
+
+    <!--
+Author:       Amir Hosein Khanmohammadi
+Student ID:   991646689
+Program:      index.html
+Date:         December 14, 2023
+Updated:      December 16, 2023 
+Version:      1.0
+Description:  
+This code creates a simple number guessing game in JavaScript. The script defines 3 global variables:
+"totalWins", "totalLosses", and "totalGames".
+
+The "getRandomNumber()" function returns a random number between 1 and 10 using the Math.floor() and 
+Math.random() functions.
+
+The "playGame(guess)" function takes a user's guess as a parameter and generates a random number using 
+the "getRandomNumber()" function. It increments the "totalGames" variable and then checks if the user's 
+guess is equal to the random number. If the guess is correct, it increments the "totalWins" variable and 
+displays an alert saying "Congratulations! You guessed the number correctly." If the guess is incorrect, 
+it increments the "totalLosses" variable and displays an alert saying "Sorry, the number was [random number]. 
+Try again, GOOD LUCK with next guess."
+
+The "startGame()" function prompts the user to enter a guess and calls the "playGame(guess)" function if the 
+guess is a valid number between 1 and 10. If the user enters "exit", it displays an alert with the total wins, 
+total losses, and total games played. If the user enters an invalid input, it displays an alert saying "Invalid 
+input! Please try again and input only numbers between 1 and 10."
+
+The "startGame()" function then calls itself recursively so the game can continue until the user enters "exit".
+-->
+
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href=httpsfonts.googleapis.comcss2family=Robotowght@300&display=swap rel=stylesheet>
+
+</head>
+
+<body>
+    
+    <h1>GAME OF GUESS NUMBER</h1>
+    <br>
+    <h2>Explanation About My Code</h2>
+    <br>
+    <p>This code creates a simple number guessing game in JavaScript. The script defines 3 global variables:
+        "totalWins", "totalLosses", and "totalGames".</p>
+    <p>The "getRandomNumber()" function returns a random number between 1 and 10 using the Math.floor() and 
+        Math.random() functions.</p>
+    <p>The "playGame(guess)" function takes a user's guess as a parameter and generates a random number using 
+        the "getRandomNumber()" function. It increments the "totalGames" variable and then checks if the user's 
+        guess is equal to the random number. If the guess is correct, it increments the "totalWins" variable and 
+        displays an alert saying "Congratulations! You guessed the number correctly." If the guess is incorrect, 
+        it increments the "totalLosses" variable and displays an alert saying "Sorry, the number was [random number]. 
+        Try again, GOOD LUCK with next guess."</p>
+    <p>The "startGame()" function prompts the user to enter a guess and calls the "playGame(guess)" function if the 
+        guess is a valid number between 1 and 10. If the user enters "exit", it displays an alert with the total wins, 
+        total losses, and total games played. If the user enters an invalid input, it displays an alert saying "Invalid 
+        input! Please try again and input only numbers between 1 and 10."</p>
+    <p>The "startGame()" function then calls itself recursively so the game can continue until the user enters "exit".</p>
+
+    <script type="text/javascript">
+        let totalWins = 0;
+        let totalLosses = 0;
+        let totalGames = 0;
+    
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+    
+        function playGame(guess) {
+            let random = getRandomNumber();
+            totalGames++;
+            if (guess == random) {
+                alert("Congratulations! You guessed the number correctly.");
+                totalWins++;
+            } else {
+                alert("Sorry, the number was " + random + ". Try guess again, GOOD LUCK with next guess.");
+                totalLosses++;
+            }
+        }
+    
+        function startGame() {
+            let guess = prompt("Guess a number between 1 and 10. Type 'exit' to end the game.");
+    
+            if (guess.toLowerCase() === "exit") {
+                alert("Thank you for playing! Total wins: " + totalWins + ", Total losses: " + totalLosses + " Total games: " + totalGames);
+                return;
+            }
+    
+            if (isNaN(guess) || guess < 1 || guess > 10) {
+                alert("Invalid input! Please try again and input only numbers between 1 and 10.");
+            } else {
+                playGame(guess);
+            }
+            startGame();
+        }
+    
+        startGame();
+    </script>
+
+    <footer>
+        <p class="footer-content">Copyright © 2023 Amir H Khanmohammadi<br>
+            Email: <a href="mailto:khanmoam@sheridancollege.ca">khanmoam@sheridancollege.ca</a></p>
+    </footer>
+
+</body>
+</html>
